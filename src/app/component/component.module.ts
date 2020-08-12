@@ -4,6 +4,8 @@ import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ComponentsRoutes } from './component.routing';
+import { PdfViewerModule } from 'ng2-pdf-viewer';
+
 
 @NgModule({
   imports: [
@@ -11,7 +13,8 @@ import { ComponentsRoutes } from './component.routing';
     RouterModule.forChild(ComponentsRoutes),
     FormsModule,
     ReactiveFormsModule,
-    NgbModule
+    NgbModule,
+    PdfViewerModule
   ],
   declarations: []
 })

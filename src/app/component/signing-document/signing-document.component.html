@@ -1,1 +1,12 @@
-<p>signing-document works!</p>
+
+<div class="input-group mb-3">
+  <div class="custom-file"  >
+    <input type="file" *ngIf="selectedFile" class="custom-file-input" id="inputGroupFile01" (change)="onSelectFile($event)">
+    <label class="custom-file-label" for="inputGroupFile01">Choose File</label>
+  </div>
+</div>
+
+<pdf-viewer [src]="selectedFile"
+    [render-text]="true"
+    style="display: block;"
+></pdf-viewer>

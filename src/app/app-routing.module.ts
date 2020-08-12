@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
+import { Routes, RouterModule,PreloadAllModules } from '@angular/router';
 
 import { FullComponent } from './layouts/full/full.component';
 
@@ -19,8 +19,18 @@ export const Approutes: Routes = [
 			}
 		]
 	},
-	// {
-	// 	path: '**',
-	// 	redirectTo: '/dashboard'
-	// }
+	{
+		path: '**',
+		redirectTo: '/dashboard'
+	}
 ];
+
+
+@NgModule({
+  imports: [RouterModule.forRoot(Approutes, { preloadingStrategy: PreloadAllModules })],
+  exports: [RouterModule]
+})
+
+export class AppRoutingModule {
+
+}

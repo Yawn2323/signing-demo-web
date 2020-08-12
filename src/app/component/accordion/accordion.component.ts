@@ -6,6 +6,7 @@ import { NgbPanelChangeEvent } from '@ng-bootstrap/ng-bootstrap';
 	templateUrl: 'accordion.component.html'
 })
 export class NgbdAccordionBasicComponent {
+
 	beforeChange($event: NgbPanelChangeEvent) {
 		if ($event.panelId === 'preventchange-2') {
 			$event.preventDefault();

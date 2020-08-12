@@ -4,7 +4,7 @@ import { RouteInfo } from './sidebar.metadata';
 export const ROUTES: RouteInfo[] = [
   {
     path: '',
-    title: 'Personal',
+    title: 'Demo',
     icon: 'mdi mdi-dots-horizontal',
     class: 'nav-small-cap',
     extralink: true,
@@ -20,8 +20,8 @@ export const ROUTES: RouteInfo[] = [
   },
   {
     path: '/component/accounts',
-    title: 'Accounts',
-    icon: 'mdi mdi-gauge',
+    title: 'Account',
+    icon: 'mdi mdi-dots-horizontal',
     class: '',
     extralink: false,
     submenu: []
@@ -30,7 +30,7 @@ export const ROUTES: RouteInfo[] = [
   {
     path: '/component/signing',
     title: 'Signing',
-    icon: 'mdi mdi-gauge',
+    icon: 'mdi mdi-pen',
     class: '',
     extralink: false,
     submenu: []

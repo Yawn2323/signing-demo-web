@@ -1,12 +1,31 @@
-
-<div class="input-group mb-3">
-  <div class="custom-file"  >
-    <input type="file" *ngIf="selectedFile" class="custom-file-input" id="inputGroupFile01" (change)="onSelectFile($event)">
-    <label class="custom-file-label" for="inputGroupFile01">Choose File</label>
+<div class="container">
+  <div class="card">
+      <div class="card-body" [class.hide]="isDone">
+            <div clas="row">
+              <canvas id="signature-pad" #signaturePad width="1100" height="400" style="touch-action: none;"></canvas>
+            </div>
+            <div class="row">
+              <div class="col-6">
+                <button type="submit" class="btn btn-primary btn-lg" (click)="onClearSignature()">Clear</button>&nbsp;
+                <button type="submit" class="btn btn-danger btn-lg" (click)="savePNG()">Save as PNG</button>&nbsp;
+                <button type="submit" class="btn btn-warning btn-lg" (click)="doneSign()">Done</button>
+              </div>
+          </div>
+      </div>
+  </div>
+  <div>
+    <div class="card" *ngIf="isDone">
+        <div class="card-body">
+            <div class="row">
+                <img [src]=signatureImg/>
+            </div>
+            <div class="row">
+              <div class="col-6">
+                <button type="submit" class="btn btn-primary btn-lg" (click)="onClearSignature()">Next</button>&nbsp;
+                <button type="submit" class="btn btn-danger btn-lg" (click)="savePNG()">Go Back</button>&nbsp;
+              </div>
+          </div>
+        </div>
+      </div>
   </div>
 </div>
-
-<pdf-viewer [src]="selectedFile"
-    [render-text]="true"
-    style="display: block;"
-></pdf-viewer>

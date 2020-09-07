@@ -7,6 +7,7 @@ import { ComponentsRoutes } from './component.routing';
 import { PdfViewerModule } from 'ng2-pdf-viewer';
 
 
+
 @NgModule({
   imports: [
     CommonModule,
@@ -14,7 +15,7 @@ import { PdfViewerModule } from 'ng2-pdf-viewer';
     FormsModule,
     ReactiveFormsModule,
     NgbModule,
-    PdfViewerModule
+    PdfViewerModule,
   ],
   declarations: []
 })

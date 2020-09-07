@@ -22,6 +22,8 @@ import { BreadcrumbComponent } from './shared/breadcrumb/breadcrumb.component';
 import { Approutes } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SpinnerComponent } from './shared/spinner.component';
+import { SignaturePadModule } from 'angular2-signaturepad';
+
 
 @NgModule({
 	declarations: [
@@ -38,7 +40,8 @@ import { SpinnerComponent } from './shared/spinner.component';
 		BrowserAnimationsModule,
 		FormsModule,
 		HttpClientModule,
-		NgbModule,
+    NgbModule,
+    SignaturePadModule,
 		RouterModule.forRoot(Approutes, { useHash: false })
   ],
   providers: [{provide: LocationStrategy, useClass: HashLocationStrategy}],

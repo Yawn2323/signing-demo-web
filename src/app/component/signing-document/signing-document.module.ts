@@ -4,6 +4,8 @@ import { SigningDocumentComponent } from './signing-document.component';
 import { SigningDocumentRoutingModule } from './signing-document-routing.module';
 import { PdfViewerModule } from 'ng2-pdf-viewer';
 import { SharedModule } from '../../shared/shared.module';
+import { SignaturePadModule } from 'angular2-signaturepad';
+
 
 @NgModule({
 
@@ -12,7 +14,8 @@ import { SharedModule } from '../../shared/shared.module';
   imports: [
     SigningDocumentRoutingModule,
     PdfViewerModule,
-    SharedModule
+    SharedModule,
+    SignaturePadModule
   ]
 })
 export class SigningDocumentsModule {}

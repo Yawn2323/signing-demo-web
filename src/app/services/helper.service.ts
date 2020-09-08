@@ -22,7 +22,22 @@ public static utf8toBase64(str: string) {
       function toSolidBytes(match, p1) {
           return String.fromCharCode(('0x' + p1) as any);
       }));
-}
+  }
+
+      /**
+     * Convert base64 string to hex string
+     * @param base64
+     */
+    public static base64toHex(base64: string) {
+      let raw = atob(base64);
+      let hex = '';
+      for (let i = 0; i < raw.length; i++) {
+          let _hex = raw.charCodeAt(i).toString(16)
+          hex += (_hex.length == 2 ? _hex : '0' + _hex);
+      }
+      return hex;
+  }
+
 
 
 }

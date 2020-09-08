@@ -22,7 +22,7 @@ export class SigningDocumentComponent implements OnInit {
   basePadW: number = 376;
   basePadH: number = 176;
   signatureImg:string;
-
+  isProcessing: boolean = false;
 
   constructor(private domSanitizer: DomSanitizer, private helperService:HelperService) {
       this.isDone = false;
@@ -78,6 +78,8 @@ export class SigningDocumentComponent implements OnInit {
   }
 
 
+
+
   changeColor() {
     const r = Math.round(Math.random() * 255);
     const g = Math.round(Math.random() * 255);
@@ -117,6 +119,10 @@ export class SigningDocumentComponent implements OnInit {
       const dataURL = this.signaturePad.toDataURL();
       this.download(dataURL, 'signature.png');
     }
+  }
+
+  onConfirmation(){
+      this.isProcessing = true;
   }
 
 
